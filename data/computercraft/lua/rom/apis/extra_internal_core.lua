@@ -40,6 +40,7 @@ function RouteEvent(clientID, msg)
     end
 end
 
+-- Allow this to also detect turtles
 function ComputerAtPos(compID, x, y, z)
     local blockData = commands.getBlockInfo(x, y, z)
     return blockData.nbt ~= nil and blockData.nbt.ComputerId == compID and blockData.nbt.On == 1 
